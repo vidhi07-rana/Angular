@@ -1,7 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
-html{
-    height: 100%;
-}
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: antiquewhite;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+    padding: 10px;
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#users {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    max-height: 20vh;
+ 
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    menu {
+        width: auto;
+    }
 }

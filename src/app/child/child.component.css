@@ -45,3 +45,32 @@ span {
     font-size: 1rem;
     font-weight: normal;
 }
+button {
+    transition: height 0.3s ease;
+  }
+  
+  button.active {
+    height: 60px; /* Adjust the height as needed */
+  }
+  
+  button {
+    transition: height 0.3s ease, background-color 0.3s ease;
+    background-color: #5a3d5c; /* Default background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  button.active {
+    height: 60px; /* Adjust the height as needed */
+    background-color: darkgrey; /* Highlight background color */
+  }
+  
+  button img {
+    margin-right: 10px;
+  }
+  

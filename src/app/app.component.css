@@ -1,22 +1,49 @@
 .main-container {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
 }
 
 .left-column {
   flex: 1;
+  max-width: 30%;
+  padding-right: 1rem;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
 }
 
 .right-column {
-  flex: 1;
- 
+  flex: 2;
+  max-width: 70%;
+  padding-left: 1rem;
 }
 
-.message {
-  margin-top: 20px;
+#users {
+  list-style-type: none;
+  padding: 5px;
+  margin: 0;
+  width: 300%;
+  background-color: black;
+}
+
+#users p {
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container p {
+  width: 100%;
+  margin: 0;
   padding: 10px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
-  width: 100%;
 }

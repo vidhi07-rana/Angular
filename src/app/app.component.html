@@ -3,28 +3,20 @@
 <main class="main-container">
   <div class="left-column">
     <ul id="users">
-      @for (user of users; track user.id) {
+      <p *ngFor="let user of users">
         <app-child
-        [users]="user"
-           (select)="onSelectUser($event)">
-         </app-child>  
-      }
-
-     
+          [users]="user"
+          [selected]="user.id === selectid"
+          (select)="onSelectUser($event)">
+        </app-child>
+      </p>
     </ul>
   </div>
 
-
-
   <div class="right-column">
-
-    @if(selectedUser){
-  <app-task [name]="selectedUser.name" ></app-task>
-    }
-    @else{
-      <h1> Select the user </h1>
-    }
+    <app-task [userId]="selectedUser.id" *ngIf="selectedUser; else fallback" [name]="selectedUser.name"></app-task>
+    <ng-template #fallback>
+      <h1>Select the user</h1>
+    </ng-template>
   </div>
-  
-  <app-hello (hello)="sayHiii($event)"></app-hello>
 </main>

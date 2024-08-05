@@ -9,12 +9,13 @@ import { CommonModule } from '@angular/common';
 import { HelloComponent } from "./hello/hello.component";
 import { TaskComponent } from "./task/task.component";
 import { ChangeDetectorRef } from '@angular/core';
+import { NgFor, NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, UserComponent, ChildComponent, CommonModule, HelloComponent, TaskComponent],
+  imports: [RouterOutlet, HeaderComponent, UserComponent, ChildComponent, CommonModule, HelloComponent, TaskComponent,NgFor,NgIf],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -24,6 +25,7 @@ export class AppComponent {
   name ! :string
   users = DUMMY_USERS;
   selectid :string = ''
+
 
  
 constructor(private cdr: ChangeDetectorRef) {}

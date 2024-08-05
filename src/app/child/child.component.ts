@@ -1,20 +1,7 @@
 import { Component, EventEmitter, Input, Output, output } from '@angular/core';
+import { Users } from './child.model';
 
 
-//type alias 
-// type Users = {
-//   id : string,
-//   name : string,
-//   avatar : string
-// }
-
-//interface 
-
-interface Users {
-  id : string,
-  name : string,
-  avatar : string
-}
 
 
 @Component({
@@ -29,6 +16,7 @@ export class ChildComponent {
   // @Input() avatar!: string;
   // @Input() name!: string;
 @Input() users! : Users
+@Input({required:true}) selected! : boolean 
   // @Input() users !: {
   //   id : string,
   //   name: string ,
