@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { Users } from './child.model';
+import { CardComponent } from "../shared/card/card.component";
 
 
 
@@ -7,7 +8,7 @@ import { Users } from './child.model';
 @Component({
   selector: 'app-child',
   standalone: true,
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './child.component.html',
   styleUrl: './child.component.css'
 })
