@@ -7,7 +7,7 @@ import { TasksService } from '../tasks.service';
 @Component({
   selector: 'app-task-more',
   standalone: true,
-  imports: [DatePipe, CardComponent],
+  imports: [DatePipe],
   templateUrl: './task-more.component.html',
   styleUrl: './task-more.component.css'
 })
