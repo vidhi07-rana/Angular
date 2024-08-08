@@ -7,8 +7,6 @@ import { CardComponent } from "../shared/card/card.component";
 
 @Component({
   selector: 'app-child',
-  standalone: true,
-  imports: [CardComponent],
   templateUrl: './child.component.html',
   styleUrl: './child.component.css'
 })
